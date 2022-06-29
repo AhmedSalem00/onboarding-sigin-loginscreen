@@ -1,28 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:task1/login/components/button.dart';
-import 'package:task1/login/components/components.dart';
-import 'package:task1/login/login/login_screen.dart';
-import 'package:task1/sigin/sigin_screen.dart';
+import 'package:task1/modules/components/button.dart';
+import 'package:task1/modules/sigin/sigin_screen.dart';
 
-class SigninScreen extends StatelessWidget {
+
+class LoginScreen extends StatelessWidget {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
-  var PhoneController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            (Icons.arrow_back),
-            color: Colors.grey,
-            size: 20.0,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
@@ -37,20 +25,17 @@ class SigninScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Sign in',
-                    style: TextStyle(
-                      color: Colors.black45,
-                      fontSize: 40.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Image.asset(
+                    'assets/images/login.png',
                   ),
-                  Text(
-                    'create an account it\'s free',
-                    style: TextStyle(
-                      color: Colors.black45,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+                  Center(
+                    child: Text(
+                      'LOGIN',
+                      style: TextStyle(
+                        color: Colors.black45,
+                        fontSize: 40.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -78,38 +63,6 @@ class SigninScreen extends StatelessWidget {
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  TextFormField(
-                    controller: PhoneController,
-                    keyboardType: TextInputType.phone,
-                    obscureText: true,
-                    onFieldSubmitted: (String value) {
-                      print(value);
-                    },
-                    onChanged: (String value) {
-                      print(value);
-                    },
-                    validator: (String? value) {
-                      if (value!.isEmpty) {
-                        return 'Phone must be not be empty';
-                      }
-                      return null;
-                    },
-                    decoration: InputDecoration(
-                      labelText: 'Phone',
-                      prefixIcon: Icon(
-                        Icons.phone_android,
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(
-                          color: Colors.teal,
-                        ),
                       ),
                     ),
                   ),
@@ -152,7 +105,7 @@ class SigninScreen extends StatelessWidget {
                     height: 20.0,
                   ),
                   ButtonKey(
-                    text: 'Register',
+                    text: 'LOGIN',
                     background: Colors.teal,
                     textColor: Colors.black,
                     function: () {
@@ -161,22 +114,23 @@ class SigninScreen extends StatelessWidget {
                       print(passwordController.text);
                     },
                   ),
+
                   SizedBox(
-                    height: 20.0,
+                    height: 10.0,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Has any account?',
+                        'Don\'t have an account?',
                         style: TextStyle(color: Colors.teal),
                       ),
                       TextButton(
                         onPressed: () {
-                          navigateTo(context, LoginScreen());
+                          navigateTo(context, SigninScreen());
                         },
                         child: Text(
-                          'Sign in here',
+                          'Sign in',
                           style: TextStyle(color: Colors.teal),
                         ),
                       ),

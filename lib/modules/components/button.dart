@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1/login/components/components.dart';
-import 'package:task1/login/login/login_screen.dart';
+
 
 class ButtonKey extends StatelessWidget {
   final String text;
@@ -40,3 +39,5 @@ void navigateTo(context, widget) => Navigator.push(
         builder: (context) => widget,
       ),
     );
+
+

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1/login/login/login_screen.dart';
-import 'package:task1/login/on_boarding/onboard_screen.dart';
+import 'package:task1/modules/on_boarding/onboard_screen.dart';
 
 void main() {
   runApp(const MyApp());

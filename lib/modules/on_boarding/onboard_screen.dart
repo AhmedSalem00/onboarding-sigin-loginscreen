@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task1/login/components/button.dart';
-import 'package:task1/login/components/components.dart';
-import 'package:task1/login/login/login_screen.dart';
+import 'package:task1/modules/components/button.dart';
+import 'package:task1/modules/login/login_screen.dart';
+
 
 class BoardingModel {
   final String image;
