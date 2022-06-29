@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:task1/modules/components/button.dart';
 import 'package:task1/modules/login/login_screen.dart';
 
@@ -82,36 +83,17 @@ class SigninScreen extends StatelessWidget {
                   SizedBox(
                     height: 20.0,
                   ),
-                  TextFormField(
-                    
-                    controller: PhoneController,
-                    keyboardType: TextInputType.phone,
-                    obscureText: true,
-                    onFieldSubmitted: (String value) {
-                      print(value);
-                    },
-                    onChanged: (String value) {
-                      print(value);
-                    },
-                    validator: (String? value) {
-                      if (value!.isEmpty) {
-                        return 'Phone must be not be empty';
-                      }
-                      return null;
-                    },
+                  IntlPhoneField(
                     decoration: InputDecoration(
-                      labelText: 'Phone',
-                      prefixIcon: Icon(
-                        Icons.phone_android,
-                      ),
+                      labelText: 'Phone Number',
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(
-                          color: Colors.teal,
-                        ),
+                        borderSide: BorderSide(),
                       ),
-
                     ),
+                    initialCountryCode: 'IN',
+                    onChanged: (phone) {
+                      print(phone.completeNumber);
+                    },
                   ),
 
                   SizedBox(
