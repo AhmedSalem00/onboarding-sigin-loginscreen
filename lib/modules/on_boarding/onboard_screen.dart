@@ -3,41 +3,7 @@ import 'package:task1/modules/components/button.dart';
 import 'package:task1/modules/login/login_screen.dart';
 
 
-class BoardingModel {
-  final String image;
-  final String title;
-  final String body;
-
-  BoardingModel({
-    required this.title,
-    required this.image,
-    required this.body,
-  });
-}
-
-class OnBoardScreen extends StatefulWidget {
-  @override
-  State<OnBoardScreen> createState() => _OnBoardScreenState();
-  List<BoardingModel> boarding = [
-    BoardingModel(
-      image: 'assets/images/on_board.png',
-      title: 'On Board 1 Title',
-      body: 'On Board 1 Body',
-    ),
-    BoardingModel(
-      image: 'assets/images/on_board.png',
-      title: 'On Board 2 Title',
-      body: 'On Board 2 Body',
-    ),
-    BoardingModel(
-      image: 'assets/images/on_board.png',
-      title: 'On Board 3 Title',
-      body: 'On Board 3 Body',
-    ),
-  ];
-}
-
-class _OnBoardScreenState extends State<OnBoardScreen> {
+class OnBoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

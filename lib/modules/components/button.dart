@@ -23,9 +23,11 @@ class ButtonKey extends StatelessWidget {
       child: MaterialButton(
         height: 50.0,
         color: Colors.teal,
+        textColor: Colors.white,
         onPressed: function,
         child: Text(
           text,
+
         ),
       ),
     );
@@ -39,5 +41,7 @@ void navigateTo(context, widget) => Navigator.push(
         builder: (context) => widget,
       ),
     );
+
+
 
 

@@ -76,7 +76,7 @@ class SigninScreen extends StatelessWidget {
                         Icons.email,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                     ),
                   ),
@@ -87,7 +87,7 @@ class SigninScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: 'Phone Number',
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                     ),
                     initialCountryCode: 'IN',
@@ -97,7 +97,7 @@ class SigninScreen extends StatelessWidget {
                   ),
 
                   SizedBox(
-                    height: 20.0,
+                    height: 10.0,
                   ),
                   TextFormField(
                     controller: passwordController,
@@ -137,7 +137,7 @@ class SigninScreen extends StatelessWidget {
                   ButtonKey(
                     text: 'Register',
                     background: Colors.teal,
-                    textColor: Colors.black,
+                    textColor: Colors.white,
                     function: () {
                       if (formKey.currentState!.validate())
                         print(emailController.text);

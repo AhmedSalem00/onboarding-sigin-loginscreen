@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                         Icons.email,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                     ),
                   ),
@@ -107,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                   ButtonKey(
                     text: 'LOGIN',
                     background: Colors.teal,
-                    textColor: Colors.black,
+                    textColor: Colors.white,
                     function: () {
                       if (formKey.currentState!.validate())
                         print(emailController.text);
