@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task1/modules/components/button.dart';
 import 'package:task1/modules/login/login_screen.dart';
+import 'package:task1/shared/components/button.dart';
 
 
 class OnBoardScreen extends StatelessWidget {

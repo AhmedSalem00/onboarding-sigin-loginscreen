@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task1/modules/components/button.dart';
 import 'package:task1/modules/sigin/sigin_screen.dart';
+import 'package:task1/shared/components/button.dart';
 
 
 class LoginScreen extends StatelessWidget {
