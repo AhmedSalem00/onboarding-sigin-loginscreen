@@ -11,6 +11,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
@@ -57,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                       return null;
                     },
                     decoration: InputDecoration(
-                      labelText: 'Email Address',
+                      labelText:  'Eg.example@gmail.com',
                       prefixIcon: Icon(
                         Icons.email,
                       ),

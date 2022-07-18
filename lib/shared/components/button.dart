@@ -6,12 +6,16 @@ class ButtonKey extends StatelessWidget {
   final Function() function;
   final Color textColor;
   final Color background;
+
+
   const ButtonKey({
     Key? key,
     required this.text,
     required this.function,
     required this.textColor,
     required this.background,
+
+
   }) : super(key: key);
 
   @override
@@ -19,7 +23,7 @@ class ButtonKey extends StatelessWidget {
     return Container(
       width: double.infinity,
       clipBehavior: Clip.antiAliasWithSaveLayer,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
       child: MaterialButton(
         height: 50.0,
         color: Colors.teal,
@@ -41,6 +45,7 @@ void navigateTo(context, widget) => Navigator.push(
         builder: (context) => widget,
       ),
     );
+
 
 
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:task1/modules/login/login_screen.dart';
 import 'package:task1/shared/components/button.dart';
@@ -45,15 +46,30 @@ class SigninScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'create an account it\'s free',
+                    'Create an account it\'s free',
                     style: TextStyle(
                       color: Colors.black45,
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Help',
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(Icons.help),
+                      ],
+                    ),
+                  ),
                   SizedBox(
-                    height: 40.0,
+                    height: 15.0,
                   ),
                   TextFormField(
                     controller: emailController,
@@ -71,7 +87,7 @@ class SigninScreen extends StatelessWidget {
                       return null;
                     },
                     decoration: InputDecoration(
-                      labelText: 'Email Address',
+                      labelText: 'Eg.example@gmail.com',
                       prefixIcon: Icon(
                         Icons.email,
                       ),
@@ -95,7 +111,6 @@ class SigninScreen extends StatelessWidget {
                       print(phone.completeNumber);
                     },
                   ),
-
                   SizedBox(
                     height: 10.0,
                   ),
@@ -145,7 +160,52 @@ class SigninScreen extends StatelessWidget {
                     },
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 10.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        'Or',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey,
+                          fontSize: 16,
+                        ),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          color: Colors.grey,
+
+                        ),
+                      ),
+
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    child: OutlinedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        FontAwesomeIcons.google,
+                        color: Colors.teal,
+                        size: 20.0,
+                      ),
+                      label: Text(
+                        'Sign in with Google',
+                        style: TextStyle(
+                          color: Colors.teal,
+                        ),
+                      ),
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
